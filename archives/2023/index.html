@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Archives | Hexo</title>
+        <title>Archives | Nbc7rs</title>
         <meta name="author" content="Nbc" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -17,11 +17,20 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
 
 
 <script src="/js/lib/preview.js"></script>
 
 
+
+<script src="/js/lib/search.js"></script>
 
 
 
@@ -42,7 +51,7 @@
             <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <div class="desktop-menu">
         <a class="title" href="/">
-            <span>HEXO</span>
+            <span>NBC7RS</span>
         </a>
         
         <a href="/">
@@ -75,7 +84,7 @@
         <div class="curtain" @click="shouMenuItems = !shouMenuItems" v-show="shouMenuItems"></div>
         <div class="title" @click="shouMenuItems = !shouMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;HEXO</span>
+            <span>&emsp;NBC7RS</span>
         </div>
         <transition name="slide">
         <div class="items" v-show="shouMenuItems">
@@ -135,6 +144,8 @@
                 
 <div id="archives">
     
+    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
+    
     <div id="timeline-wrap" ref="timeline">
         
         <div class="timeline" data-title="helloworld">
@@ -158,7 +169,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2023 Hexo
+            2022 - 2023 Nbc7rs
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
