@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Nbc7rs&#39;Blog</title>
+        <title>SSRF漏洞 | Nbc7rs&#39;Blog</title>
         <meta name="author" content="Nbc" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -32,7 +32,9 @@
 
 
 
-<script src="/js/lib/home.js"></script>
+
+
+
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -127,36 +129,11 @@
 
             <transition name="into">
             <div id="main" v-show="!loading">
-                <div id="home-head">
-    <div
-        id="home-background"
-        ref="homeBackground"
-        data-images="/images/qbhn.jpg,/images/background.jpg,/images/jinx.jpg,/images/avatar.jpg"
-    ></div>
-    <div id="home-info" @click="homeClick">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>Nbc7rs&#39;Blog</h1>
-                <h3></h3>
-                <h5></h5>
-            </div>
-        </span>
+                <div class="article">
+    <div>
+        <h1>SSRF漏洞</h1>
     </div>
-</div>
-<div id="home-posts-wrap"  ref="homePostsWrap">
-    <div id="home-posts">
-        
-
-<div class="post">
-    <a href="/2023/04/13/SSRF%E6%BC%8F%E6%B4%9E/">
-        <h2 class="post-title">SSRF漏洞</h2>
-    </a>
-    <div class="category-and-date">
-        
+    <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
@@ -166,10 +143,9 @@
         
         
     </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p><a name="zaUBr"></a></p>
+    
+    <div class="content" v-pre>
+        <p><a name="zaUBr"></a></p>
 <h1 id="一、什么是SSRF"><a href="#一、什么是SSRF" class="headerlink" title="一、什么是SSRF"></a>一、什么是SSRF</h1><p>SSRF (Server-Side Request Forgery，服务器端请求伪造）是一种由攻击者构造请求，由服务端发起请求的安全漏洞。 一些服务端提供了从其他服务器应用获取数据的功能，但又没有对目标地址做严格过滤与限制，导致攻击者可以传入任意的地址来让后端服务器对其发起请求，并返回对该目标地址请求的数据。SSRF影响外网访问不了的内网系统。（就像追女生直接问问不到她的信息，但是可以通过对她的身边人如有破绽闺蜜对她发起攻击，得到或传达信息）<br><a name="XHwHC"></a></p>
 <h1 id="二、SSRF的危害"><a href="#二、SSRF的危害" class="headerlink" title="二、SSRF的危害"></a>二、SSRF的危害</h1><p>SSRF的形成大多是由于服务端提供了从其他服务器应用获取数据的功能且没有对目标地址做过滤与限制。SSRF利用存在缺陷的Web应用作为代理攻击远程和本地的服务器。</p>
 <ul>
@@ -309,58 +285,13 @@ curl_close($ch);
 <li>统一错误信息，防止利用错误信息来判断远端服务器的端口状态</li>
 </ul>
 
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2023/04/13/SSRF%E6%BC%8F%E6%B4%9E/" class="go-post">阅读全文</a>
-</div>
-
-
-        <div class="page-current">
-    <div class="prev">
-        
-    </div>
-    <div class="page-index">
-        
-        <span class="current">1</span>
-        
-    </div>
-    <div class="next">
-        
-    </div>
-</div>
-
     </div>
     
-    <div id="home-card">
-        <div id="card-div">
-    <div class="card-style">
-        <div class="avatar">
-            <img src="/images/jdly.jpg" alt="avatar" />
-        </div>
-        <div class="name">Nbc</div>
-        <div class="description">
-            <p>潜龙勿用，藏锋守拙<br>你被什么保护就被什么限制</p>
-
-        </div>
-        
-        
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://gtl-ju.github.io/">师从:GTL-JU</a>
-            </div>
-            
-        </div>
-        
-    </div>
-</div>
-
-    </div>
+    
+    
+    
+    
+    
     
 </div>
 
@@ -393,6 +324,12 @@ curl_close($ch);
             
         </div>
         <script src="/js/main.js"></script>
+        
+        
+
+
+
+
         
     </body>
 </html>
